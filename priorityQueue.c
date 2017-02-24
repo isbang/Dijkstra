@@ -90,7 +90,7 @@ node* dequeue(queue *Q) {
 	// ret->priority is minimum
 	node *ret = Q->list[1];
 
-	// ¹è¿­ ¾ÕÀ¸·Î ÇÑ Ä­¾¿ ÀÌµ¿
+	// ë°°ì—´ ì•ìœ¼ë¡œ í•œ ì¹¸ì”© ì´ë™
 	for (int i = 1; i < Q->tail; i++) {
 		Q->list[i] = Q->list[i + 1];
 	}

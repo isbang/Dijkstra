@@ -1,25 +1,25 @@
-#define DIRECT      0           // ´Ü¹æÇâ
-#define UNDIRECT    1           // ¾ç¹æÇâ
+#define DIRECT      0           // ë‹¨ë°©í–¥
+#define UNDIRECT    1           // ì–‘ë°©í–¥
 
-typedef struct _edge {  // °£¼±
-    int weight;     // °¡ÁßÄ¡
-    struct _vertex *pVer;  // ¿¬°áµÉ °÷
+typedef struct _edge {  // ê°„ì„ 
+    int weight;     // ê°€ì¤‘ì¹˜
+    struct _vertex *pVer;  // ì—°ê²°ë  ê³³
     struct _edge *pNext;
 }edge;
 
-typedef struct _vertex { // Á¤Á¡
-    char name;  // Á¤Á¡ ÀÌ¸§
-    int deg;    // °è¼ö
-    struct _edge *pEdge;    // °£¼±
+typedef struct _vertex { // ì •ì 
+    char name;  // ì •ì  ì´ë¦„
+    int deg;    // ê³„ìˆ˜
+    struct _edge *pEdge;    // ê°„ì„ 
     struct _vertex *pNext;
 }vertex;
 
-typedef struct _graph { // ±×·¡ÇÁ ³ëµå
-    int v_num;  // Á¤Á¡ °¹¼ö
-    vertex *pVHead;  // Á¤Á¡
+typedef struct _graph { // ê·¸ë˜í”„ ë…¸ë“œ
+    int v_num;  // ì •ì  ê°¯ìˆ˜
+    vertex *pVHead;  // ì •ì 
 }graph;
 
-/* ±×·¡ÇÁ ±¸Á¶µµ
+/* ê·¸ë˜í”„ êµ¬ì¡°ë„
 /-- graph ------------------------------------------------------
 | v_num
 | *pVHead  ->/==== vertex ====\  /->/===== edge =====\  /-> edge

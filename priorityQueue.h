@@ -6,9 +6,9 @@
 #define PARENT_NODE(X)		(X/2)
 
 
-typedef struct _node {    // Å¥¸¦ À§ÇÑ ³ëµå
-    int priority;  // ¿ì¼±¼øÀ§
-    void *pData;   // µ¥ÀÌÅÍ
+typedef struct _node {    // íë¥¼ ìœ„í•œ ë…¸ë“œ
+    int priority;  // ìš°ì„ ìˆœìœ„
+    void *pData;   // ë°ì´í„°
 }node;
 
 typedef struct _queue {

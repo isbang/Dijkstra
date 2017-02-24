@@ -13,25 +13,25 @@
  * @return     shortest length from [from] to [to]
  */
 DijekstraResult DijkstraShortestPathsSingleTargetCount(graph* G, vertex* from, vertex* to) {
-	// ÀÓ½Ã º¯¼ö
+	// ìž„ì‹œ ë³€ìˆ˜
 	vertex *pVer = NULL;
 	node *pDeqNode = NULL;
 
-	// Å¥
+	// í
 	queue *Q = initQueue();
 
 
-	// ¸ðµç °£¼± Å¥¿¡ »ðÀÔ
+	// ëª¨ë“  ê°„ì„  íì— ì‚½ìž…
 	pVer = G->pVHead;
 	while (pVer) {
         enqueue(Q, pVer);
 		pVer = pVer->pNext;
     }
 
-	// from ÀÇ ¿ì¼±¼øÀ§ ÃÊ±âÈ­
+	// from ì˜ ìš°ì„ ìˆœìœ„ ì´ˆê¸°í™”
 	findNode(Q, from)->priority = 0;
 
-	// Å½»ö ½ÃÀÛ
+	// íƒìƒ‰ ì‹œìž‘
 	while (1) {	// if dequeue data == to : break
 		pDeqNode = dequeue(Q);
 		if (pDeqNode->pData == to || pDeqNode == NULL) break;
@@ -39,7 +39,7 @@ DijekstraResult DijkstraShortestPathsSingleTargetCount(graph* G, vertex* from, v
 		pVer = pDeqNode->pData;
 		edge *pEdge = pVer->pEdge;
 
-		// °£¼± ¿ÏÈ­
+		// ê°„ì„  ì™„í™”
         while (pEdge) {
 			node *nodeFromEdge = findNode(Q, pEdge->pVer);
             if (nodeFromEdge) {

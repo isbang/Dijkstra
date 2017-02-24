@@ -40,5 +40,5 @@ int main(void) {
 
 	scanf("%c %c", &from, &to);
 	shortest_path = DijkstraShortestPathsSingleTargetCount(&G, getVertexAddr(&G, from), getVertexAddr(&G, to));
-	printf("%c, %c: ÃÖ´Ü °æ·Î = %d, ÃÖ´Ü °æ·ÎÀÇ ¼ö = %d\n", from, to, shortest_path.cost, shortest_path.count);
+	printf("%c, %c: ìµœë‹¨ ê²½ë¡œ = %d, ìµœë‹¨ ê²½ë¡œì˜ ìˆ˜ = %d\n", from, to, shortest_path.cost, shortest_path.count);
 }
